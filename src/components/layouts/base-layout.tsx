@@ -17,7 +17,8 @@ const _MainContent = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   paddingTop: 50,
-  maxWidth: 750,
+  width: 'min(92vw, 750px)', // Lil scuffed
+  /*maxWidth: 750,*/
 });
 
 const _Spacer = styled('div', {
