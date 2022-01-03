@@ -1,14 +1,27 @@
 import React from 'react';
 import { styled } from 'src/lib/styles';
+import Footer from './footer';
+import Header from './header';
 
-const _StyledLayout = styled('div', {
+const _Wrapper = styled('div', {
   fontFamily: '$base',
   display: 'flex',
   flexDirection: 'column',
-  '@bp1': { paddingLeft: '20px', paddingRight: '20px' },
-  '@bp2': { paddingLeft: '50px', paddingRight: '50px' },
-  '@bp3': { paddingLeft: '150px', paddingRight: '150px' },
-  '@bp4': { paddingLeft: '250px', paddingRight: '250px' },
+  alignItems: 'center',
+  paddingLeft: 20,
+  paddingRight: 20,
+  height: '100vh',
+});
+
+const _MainContent = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
+  paddingTop: 50,
+  maxWidth: 750,
+});
+
+const _Spacer = styled('div', {
+  flexGrow: 1,
 });
 
 type BaseLayoutProps = {
@@ -16,7 +29,16 @@ type BaseLayoutProps = {
 };
 
 const BaseLayout = ({ children }: BaseLayoutProps) => {
-  return <_StyledLayout>{children}</_StyledLayout>;
+  return (
+    <_Wrapper>
+      <_MainContent>
+        <Header />
+        {children}
+      </_MainContent>
+      <_Spacer />
+      <Footer />
+    </_Wrapper>
+  );
 };
 
 export default BaseLayout;

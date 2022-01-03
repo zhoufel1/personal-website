@@ -3,7 +3,7 @@ import { createStitches } from '@stitches/react';
 import '@fontsource/open-sans';
 import '@fontsource/source-code-pro';
 
-export const { styled } = createStitches({
+export const { styled, globalCss } = createStitches({
   theme: {
     fonts: {
       base: 'Open Sans',
@@ -16,5 +16,11 @@ export const { styled } = createStitches({
     bp3: '(min-width: 62em)',
     bp4: '(min-width: 80em)',
     bp5: '(min-width: 96em)',
+  },
+});
+
+export const globalStyles = globalCss({
+  body: {
+    margin: 0,
   },
 });
