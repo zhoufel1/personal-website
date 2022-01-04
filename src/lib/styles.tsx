@@ -9,6 +9,9 @@ export const { styled, globalCss } = createStitches({
       base: 'Open Sans',
       code: 'Source Code Pro',
     },
+    fontSizes: {
+      sm: '11px'
+    }
   },
   media: {
     bp1: '(min-width: 30em)',
