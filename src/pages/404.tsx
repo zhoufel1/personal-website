@@ -13,7 +13,6 @@ const Custom404Page = () => {
   return (
     <>
       <_Container>
-        <h3>You made a Fucko Wucko</h3>
         <h1>O W O</h1>
       </_Container>
     </>
