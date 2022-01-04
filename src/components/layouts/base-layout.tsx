@@ -1,21 +1,19 @@
 import React from 'react';
 import { styled } from 'src/lib/styles';
+import Container from '../primitives/container';
 import Footer from './footer';
 import Header from './header';
 
-const _Wrapper = styled('div', {
-  fontFamily: '$base',
-  display: 'flex',
-  flexDirection: 'column',
+const _LayoutRoot = styled(Container, {
   alignItems: 'center',
   paddingLeft: 20,
   paddingRight: 20,
   height: '100vh',
+  fontFamily: '$base',
 });
 
-const _MainContent = styled('div', {
-  display: 'flex',
-  flexDirection: 'column',
+const _Content = styled(Container, {
+  alignItems: 'normal',
   paddingTop: 50,
   width: 'min(92vw, 750px)', // Lil scuffed
   /*maxWidth: 750,*/
@@ -31,14 +29,14 @@ type BaseLayoutProps = {
 
 const BaseLayout = ({ children }: BaseLayoutProps) => {
   return (
-    <_Wrapper>
-      <_MainContent>
+    <_LayoutRoot>
+      <_Content>
         <Header />
         {children}
-      </_MainContent>
+      </_Content>
       <_Spacer />
       <Footer />
-    </_Wrapper>
+    </_LayoutRoot>
   );
 };
 
