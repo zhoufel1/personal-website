@@ -5,34 +5,34 @@ import ATag from '../a-tag';
 import Separator from '../separator';
 import Link from 'next/link';
 
-const _Container = styled('div', {
+const _Wrapper = styled('div', {
   paddingBottom: 25,
 });
 
-const _Stack1 = styled('div', {
+const _Upper = styled('div', {
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
 });
 
-const _Stack = styled('div', {
+const _Lower = styled('div', {
   display: 'flex',
   gap: 25,
 });
 
 const Header = () => {
   return (
-    <_Container>
-      <_Stack1>
+    <_Wrapper>
+      <_Upper>
         <h1>BANNER</h1>
-        <Button>TEST</Button>
-      </_Stack1>
+        <Button>GITHUB</Button>
+      </_Upper>
       <Separator />
-      <_Stack>
+      <_Lower>
         <Link href="/test">
           <ATag>ABOUT</ATag>
         </Link>
-        <Link href="/test">
+        <Link href="/blog">
           <ATag>BLOG</ATag>
         </Link>
         <Link href="/test">
@@ -41,8 +41,8 @@ const Header = () => {
         <Link href="/test">
           <ATag>RESUME</ATag>
         </Link>
-      </_Stack>
-    </_Container>
+      </_Lower>
+    </_Wrapper>
   );
 };
 
