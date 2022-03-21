@@ -14,9 +14,12 @@ const _LayoutRoot = styled(Container, {
 
 const _Content = styled(Container, {
   alignItems: 'normal',
-  paddingTop: 50,
+  paddingTop: 25,
   width: 'min(92vw, 750px)', // Lil scuffed
   /*maxWidth: 750,*/
+  '@desktop': {
+    paddingTop: 50
+  }
 });
 
 const _Spacer = styled('div', {

@@ -10,11 +10,11 @@ const _Outer = styled('div', {
   width: 'fit-content',
   background: 'Black',
   color: 'White',
-  borderRadius: 5,
+  borderRadius: 0,
 });
 
 const _Label = styled('p', {
-  fontSize: '$sm',
+  fontSize: 10,
   margin: 3,
   padding: 3,
 });

@@ -14,6 +14,7 @@ export const { styled, globalCss } = createStitches({
     }
   },
   media: {
+    desktop: '(min-width: 510px)',
     bp1: '(min-width: 30em)',
     bp2: '(min-width: 48em)',
     bp3: '(min-width: 62em)',
